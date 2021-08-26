@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/ucudal/PW_2021_Website-federicobecona/issues"
   },
-  "homepage": "https://github.com/ucudal/PW_2021_Website-federicobecona#readme"
+  "homepage": "https://github.com/ucudal/PW_2021_Website-federicobecona#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^10.3.2",
+    "postcss": "^8.3.6",
+    "tailwindcss": "^2.2.7"
+  }
 }
