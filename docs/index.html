@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Federico Becoña</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link href="/docs/style.css" rel="stylesheet"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="https://play-lh.googleusercontent.com/Eptimf2ke2AaZUN3J4lybWXKkOLgz-aRzmGRa6XZMNrmzhCoI7a17AhJQu-IGu-9RFs"/>
-    <title>Federico Becoña</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function() {
+        emailjs.init("user_bMPP3hqwwollTtmFoaHQx");
+      })();
+    </script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 </head>
 <body>
   
@@ -84,22 +90,28 @@
   </footer>
 
 
-  <!--Modal-->
-  <div id="modal-container" class="invisible fixed w-full h-full top-0 left-0 flex justify-center items-center">
-      <div class="modal-content bg-white w-1/3 p-5">
-          <h1 class="text-2xl">Título</h1>
-          <div>
-            <p>Hola</p>
-            <p>Hola</p>
-            <p>Hola</p>
-            <p>Hola</p>
-            <p>Hola</p>
+ <!--Modal-->
+ <div id="modal-container" class="invisible fixed w-full h-full top-0 left-0 flex justify-center items-center">
+  <div class="modal-content bg-white w-1/3 p-5 rounded">
+    <div class="flex justify-end">
+      <button id="modal-close" class="text-blue-600">Cerrar</button>
+    </div>
+    <div class="p-4">
+      <h1 class="text-2xl">Contactar</h1>
+    </div>
+     <div class="p-2">
+       <form id="modal-send" class="space-y-4">
+        <input id="from_name" type="text" required class="focus:ring-1 focus:ring-blue-600 focus:outline-none w-full text-sm text-black placeholder-gray-500 border rounded-md py-2 pl-10" placeholder="Nombre"/>
+        <input id="message" type="text" required class="focus:ring-1 pb-28 focus:ring-blue-600 focus:outline-none w-full text-sm text-black placeholder-gray-500 border rounded-md py-2 pl-10" placeholder="Mensaje" />
+        <p id="modal-notifier" class="bold justify-start"></p>        
+        <div class="flex justify-end p-2">
+            <button type="submit" class="bg-blue-600 text-white p-2 rounded-full">Enviar</button>
           </div>
-          <div class="flex justify-end">
-            <button id="modal-close" class="text-blue-600">Cerrar</button>
-          </div>
+        </form>
       </div>
   </div>
+</div>
+
 
   <script src="index.js"></script>
 </body>
