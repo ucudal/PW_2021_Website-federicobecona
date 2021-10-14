@@ -1,43 +1,74 @@
-const openModalBtn = document.getElementById('modal-open')
-const closeModalBtn = document.getElementById('modal-close')
-const sendModal = document.getElementById('modal-send')
-const notifierModal = document.getElementById('modal-notifier')
-const modalContainer = document.getElementById('modal-container')
+const mailOpenModalBtns = document.getElementsByClassName('mail-modal-open')
+const mailCloseModalBtn = document.getElementById('mail-modal-close')
+const mailModalContainer = document.getElementById('mail-modal-container')
+const mailSendModal = document.getElementById('mail-modal-send')
+const mailNotifierModal = document.getElementById('mail-modal-notifier')
+
+const cvOpenModalBtns = document.getElementsByClassName('cv-modal-open')
+const cvCloseModalBtn = document.getElementById('cv-modal-close')
+const cvModalContainer = document.getElementById('cv-modal-container')
+const cvModalText = document.getElementById('cv-modal-text')
+
 let modalFrom_name = document.getElementById('from_name')
 let modalMessage = document.getElementById('message')
-openModalBtn.onclick = toggleModalHandler
-closeModalBtn.onclick = toggleModalHandler
 
-window.onclick = function(event) {
-    if (event.target == modalContainer) {
-        toggleModalHandler()
-    }
+var listModalTexts = ["Desde el año 2018 estudio la carrera de ingeniería en informática.", 
+                    "A principios de 2021 obtuve el título intermedio de analista en informática.", 
+                    "Realicé exámenes de cambridge ESOL obteniendo el First en el año 2015."]
+
+for (var i = 0, len = mailOpenModalBtns.length; i < len; i++) {
+    mailOpenModalBtns[i].onclick = toggleModalHandler
 }
+mailCloseModalBtn.onclick = toggleModalHandler
 
-sendModal.addEventListener("submit",(e)=>{
-    
+mailSendModal.addEventListener("submit",(e)=>{
     e.preventDefault()
     let templateParams = {
         from_name: modalFrom_name.value,
         message: modalMessage.value
     }
-    notifierModal.textContent = "Enviando..."
+    mailNotifierModal.textContent = "Enviando..."
     emailjs.send('mail', 'template_dfpsj68', templateParams)
     .then(function(response) {
-        notifierModal.textContent = "Mensaje enviado"
+        mailNotifierModal.textContent = "Mensaje enviado"
     }, function(error) {
-        notifierModal.textContent = "Ha habido un error"
+        mailNotifierModal.textContent = "Ha habido un error"
     });
-} )
+})
 
+for (let i = 0; i < listModalTexts.length; i++) {
+    cvOpenModalBtns[i].addEventListener('click', function() {
+        cvToggleModalHandler(listModalTexts[i])
+    })
+}
+cvCloseModalBtn.onclick = cvToggleModalHandler
+
+
+window.onclick = function(event) {
+    if (event.target == mailModalContainer) {
+        toggleModalHandler()
+    }
+    if (event.target == cvModalContainer) {
+        cvToggleModalHandler()
+    }
+}
 
 function toggleModalHandler() {
-    if(modalContainer.classList.contains("invisible")){
-        modalContainer.classList.remove("invisible")
-    }else{
-        modalContainer.classList.add("invisible")
-    }
-    notifierModal.textContent = ""
+    toggleModal(mailModalContainer)
+    mailNotifierModal.textContent = ""
     modalFrom_name.value = ""
     modalMessage.value = ""
+}
+
+function cvToggleModalHandler(text) {
+    cvModalText.textContent = text
+    toggleModal(cvModalContainer)
+}
+
+function toggleModal(modal){
+    if(modal.classList.contains("invisible")){
+        modal.classList.remove("invisible")
+    }else{
+        modal.classList.add("invisible")
+    }
 }
