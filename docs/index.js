@@ -15,7 +15,7 @@ let modalMessage = document.getElementById('message')
 
 var listModalTexts = ["Desde el año 2018 estudio la carrera de ingeniería en informática.", 
                     "A principios de 2021 obtuve el título intermedio de analista en informática.", 
-                    "Realicé exámenes de cambridge ESOL obteniendo el First en el año 2015  "]
+                    "Realicé exámenes de cambridge ESOL obteniendo el First en el año 2015.  "]
 var linksMatrix = [
                 ["Proyecto", "Lenguajes y Herramientas", ""],
                 ["Inteligencia Artificial I", "Python, SciKitLearn, RapidMiner, Excel", "https://federicobecona.github.io/Machine-Learning-Portfolio/home"],
