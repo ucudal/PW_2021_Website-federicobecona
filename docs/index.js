@@ -13,7 +13,8 @@ const cvModalText = document.getElementById('cv-modal-text')
 let modalFrom_name = document.getElementById('from_name')
 let modalMessage = document.getElementById('message')
 
-var listModalTexts = ["Desde el año 2018 estudio la carrera de Ingeniería en Informática.", 
+var listModalTexts = ["⚡Dato de color: soy de Peñarol",
+                    "Desde el año 2018 estudio la carrera de Ingeniería en Informática.", 
                     "A principios de 2021 obtuve el título intermedio de Analista en Informática.", 
                     "Realicé exámenes ESOL de la Universidad de Cambridge obteniendo el First en el año 2015.  "]
 var linksMatrix = [
@@ -27,6 +28,7 @@ var linksMatrix = [
                 ["Sistemas embebidos", "C", "https://github.com/federicobecona/Embedded-Systems"],
                 ["Bases de datos", "Java", "https://github.com/federicobecona/Databases"]
             ]
+var imagesLinks = ["https://a1.espncdn.com/combiner/i?img=%2Fphoto%2F2020%2F0426%2Fr692907_1296x729_16%2D9.jpg&w=920&h=518&scale=crop&cquality=80&location=origin&format=jpg"]
 
 for (var i = 0, len = mailOpenModalBtns.length; i < len; i++) {
     mailOpenModalBtns[i].onclick = toggleModalHandler
@@ -56,14 +58,24 @@ window.addEventListener("scroll", function(){
 for (let i = 0; i < listModalTexts.length; i++) {
     cvOpenModalBtns[i].addEventListener('click', function() {
     cvModalContent.innerHTML = ""
-    let p = document.createElement('p')
+    var p = document.createElement('p')
     p.textContent = listModalTexts[i]
     cvModalContent.appendChild(p)
     if(i==0){
-        var myTableDiv = cvModalContent
+        p.classList.add("font-bold")
+        let img = document.createElement('img')
+        img.setAttribute('src', imagesLinks[0]);
+        img.setAttribute('width', '500px');
+        img.setAttribute('heigth', '500px');
+        img.setAttribute('alt', 'Estadio de Peñarol');
+        img.classList.add("rounded-full")
+        img.classList.add("mt-4")
+        cvModalContent.appendChild(img)
+    }
+    if(i==1){
         var table = document.createElement('TABLE')
         table.style.marginTop = "20px"
-        myTableDiv.appendChild(table)
+        cvModalContent.appendChild(table)
         table.border='1'
         var tableBody = document.createElement('TBODY')
         table.appendChild(tableBody)

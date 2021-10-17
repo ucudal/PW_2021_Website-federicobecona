@@ -9,63 +9,52 @@
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="https://play-lh.googleusercontent.com/Eptimf2ke2AaZUN3J4lybWXKkOLgz-aRzmGRa6XZMNrmzhCoI7a17AhJQu-IGu-9RFs"/>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-    <script type="text/javascript">
-      (function() {
-        emailjs.init("user_bMPP3hqwwollTtmFoaHQx")
-      })();
-    </script>
+    <script type="text/javascript"> (function() {emailjs.init("user_bMPP3hqwwollTtmFoaHQx")})();</script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 </head>
 <body>
 
   <header class="top-0 left-0 fixed w-full flex sticky-navbar:bg-white">
-
     <div class="flex space-x-6 justify-around w-full p-2">
-
       <div class="flex space-x-4">
-        <a class="nav-text text-white text-2xl" href="#Inicio">Inicio</a>
+        <a class="nav-text text-white text-2xl" tabindex="1" href="#Inicio">Inicio</a>
         <p class="nav-text text-white">|</p>
-        <a class="nav-text text-white text-2xl" href="#Curriculum">Curriculum</a>
+        <a class="nav-text text-white text-2xl" tabindex="2" href="#Curriculum">Curriculum</a>
       </div>
-
-        <div class="flex justify-center items-center">
-          <button class="nav-text mail-modal-open text-white text-2xl font-thin hover:opacity-50" tabindex="10">Contactar</button>
-        </div>
+      <button class="nav-text mail-modal-open text-white text-2xl font-thin hover:opacity-50" tabindex="3">Contactar</button>  
       </div>
-
     </div>
-    
   </header>
 
   <section id="Inicio">
     <div id="central-background" class="bg-gradient-to-b from-blue-900 to-blue-500 border-b-8 border-blue-400"> 
       <div class="h-screen flex flex-col space-x-4 justify-center items-center">
-        <div id="contenedor-foto-perfil" class="border-black-2 w-64">
-          <img class = "rounded-full border-4 shadow-2xl" alt="Foto de perfil de Federico Becoña" src="https://lh3.googleusercontent.com/pw/AM-JKLVVMtyBqqMqTIxSAK-kGNYqOsMyxE6JXEoXB014DG6Zj025ELZ7yDtgAUBT3sUFe7kc6auIhb7lBYdIZBeH5dwmRrNbQSp_zeuz1e8U1bdx19mkZcIxdunsmA_NOeFx8rY2kL4sDI-MMOIkLFf7kCk=s640-no?authuser=0" />
-        </div>
+        <button class="cv-modal-open" tabindex="4">
+          <img id="foto-perfil" class = "object-contain rounded-full border-4 shadow-2xl w-64 hover:opacity-50" alt="Foto de perfil de Federico Becoña" src="https://lh3.googleusercontent.com/pw/AM-JKLVVMtyBqqMqTIxSAK-kGNYqOsMyxE6JXEoXB014DG6Zj025ELZ7yDtgAUBT3sUFe7kc6auIhb7lBYdIZBeH5dwmRrNbQSp_zeuz1e8U1bdx19mkZcIxdunsmA_NOeFx8rY2kL4sDI-MMOIkLFf7kCk=s640-no?authuser=0" />
+        </button>
         <div class="h-80">
-            <h1 id="name-title" class="text-white text-center text-6xl font-bold mb-4">Federico Becoña</h1>
-            <h2 class="font-sans text-white text-center text-2xl font-thin">estudiante de ingeniería en informática</h2>
-            <h2 class="font-sans text-white text-center text-2xl font-thin">Montevideo, Uruguay</h2>
-            <h2 class="font-sans text-white text-center text-2xl font-thin">21 años</h2>
-            <div class=" flex flex-col justify-center items-center h-50 pt-2">
-              <p class="text-white">Leer más</p>
-              <a tabindex="4" href="#Curriculum">
-                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="35px" height="35px" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet" class="jsx-156389127"><g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="white" stroke="none" class="jsx-156389127"><path d="M207 4822 l-207 -207 1278 -1278 1277 -1277 1275 1275 1275 1275 -210 210 -210 210 -1065 -1065 -1065 -1065 -1065 1065 c-586 586 -1067 1065 -1070 1065 -3 0 -98 -93 -213 -208z" class="jsx-156389127"></path><path d="M207 2652 l-207 -207 1223 -1223 1222 -1222 110 0 110 0 1218 1218 c669 669 1217 1222 1217 1227 0 6 -92 102 -205 215 l-205 205 -1068 -1068 -1067 -1067 -1065 1065 c-586 586 -1067 1065 -1070 1065 -3 0 -98 -93 -213 -208z" class="jsx-156389127"></path></g><g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="white" stroke="none" class="jsx-156389127"><path d="M207 4822 l-207 -207 1278 -1278 1277 -1277 1275 1275 1275 1275 -210 210 -210 210 -1065 -1065 -1065 -1065 -1065 1065 c-586 586 -1067 1065 -1070 1065 -3 0 -98 -93 -213 -208z" class="jsx-156389127"></path><path d="M207 2652 l-207 -207 1223 -1223 1222 -1222 110 0 110 0 1218 1218 c669 669 1217 1222 1217 1227 0 6 -92 102 -205 215 l-205 205 -1068 -1068 -1067 -1067 -1065 1065 c-586 586 -1067 1065 -1070 1065 -3 0 -98 -93 -213 -208z" class="jsx-156389127"></path></g></svg>                
-              </a>
-            </div>
+          <h1 id="name-title" class="text-white text-center text-6xl font-bold mb-4">Federico Becoña</h1>
+          <h2 class="font-sans text-white text-center text-2xl font-thin">estudiante de ingeniería en informática</h2>
+          <h2 class="font-sans text-white text-center text-2xl font-thin">Montevideo, Uruguay</h2>
+          <h2 class="font-sans text-white text-center text-2xl font-thin">21 años</h2>
+          <div class=" flex flex-col justify-center items-center h-50 pt-2">
+            <p class="text-white mt-10">Leer más</p>
+            <a tabindex="5" href="#Curriculum">
+              <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="35px" height="35px" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet" class="jsx-156389127"><g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="white" stroke="none" class="jsx-156389127"><path d="M207 4822 l-207 -207 1278 -1278 1277 -1277 1275 1275 1275 1275 -210 210 -210 210 -1065 -1065 -1065 -1065 -1065 1065 c-586 586 -1067 1065 -1070 1065 -3 0 -98 -93 -213 -208z" class="jsx-156389127"></path><path d="M207 2652 l-207 -207 1223 -1223 1222 -1222 110 0 110 0 1218 1218 c669 669 1217 1222 1217 1227 0 6 -92 102 -205 215 l-205 205 -1068 -1068 -1067 -1067 -1065 1065 c-586 586 -1067 1065 -1070 1065 -3 0 -98 -93 -213 -208z" class="jsx-156389127"></path></g><g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="white" stroke="none" class="jsx-156389127"><path d="M207 4822 l-207 -207 1278 -1278 1277 -1277 1275 1275 1275 1275 -210 210 -210 210 -1065 -1065 -1065 -1065 -1065 1065 c-586 586 -1067 1065 -1070 1065 -3 0 -98 -93 -213 -208z" class="jsx-156389127"></path><path d="M207 2652 l-207 -207 1223 -1223 1222 -1222 110 0 110 0 1218 1218 c669 669 1217 1222 1217 1227 0 6 -92 102 -205 215 l-205 205 -1068 -1068 -1067 -1067 -1065 1065 c-586 586 -1067 1065 -1070 1065 -3 0 -98 -93 -213 -208z" class="jsx-156389127"></path></g></svg>                
+            </a>
           </div>
+        </div>
       </div>
     </div>
   </section>
   
   <section id="Curriculum">
-    <div class="bg-blue-200"> 
-      <div >
-        <ul class="h-screen flex flex-col justify-center items-center">
-          <li id="cv-title" class="text-blue-900 text-center text-6xl">Currículum</li>
-          <li class="cv-subtitles text-blue-900 text-center text-4xl">Educación</li>
-          <li><button class="cv-modal-open bg-blue-600 p-4 hover:opacity-50 rounded-full" tabindex="5">
+    <div class="bg-blue-200">
+      <ul class="h-screen flex flex-col justify-center items-center">
+        <li id="cv-title" class="text-blue-900 text-center text-6xl">Currículum</li>
+        <li class="cv-subtitles text-blue-900 text-center text-4xl">Educación</li>
+        <li>
+          <button class="cv-modal-open bg-blue-600 p-4 hover:opacity-50 rounded-full" tabindex="6">
             <div class="flex flex-row space-x-2"> 
               <img class="object-contain h-20 rounded-full" src="https://media-exp1.licdn.com/dms/image/C4D0BAQGouuEyVgErYA/company-logo_100_100/0/1571413058772?e=1642636800&v=beta&t=Q7E890t4_j4UlVRmnOJRrsVsXAI5vYxfulDPrP77BOE">
               <div class="flex-column space-x-6"> 
@@ -74,9 +63,11 @@
                 <p class="cv-button-text text-white">(2018-2022)</p>
               </div>
             </div>
-          </button></li>
-          <li class="cv-subtitles text-blue-900 text-center text-4xl">Certificaciones</li>
-          <li><button class="cv-modal-open bg-blue-600 p-4 hover:opacity-50 rounded-full" tabindex="6">
+          </button>
+        </li>
+        <li class="cv-subtitles text-blue-900 text-center text-4xl">Certificaciones</li>
+        <li>
+          <button class="cv-modal-open bg-blue-600 p-4 hover:opacity-50 rounded-full" tabindex="7">
             <div class="flex flex-row space-x-2"> 
               <img class="object-contain h-20 rounded-full" src="https://media-exp1.licdn.com/dms/image/C4D0BAQGouuEyVgErYA/company-logo_100_100/0/1571413058772?e=1642636800&v=beta&t=Q7E890t4_j4UlVRmnOJRrsVsXAI5vYxfulDPrP77BOE">
               <div class="flex-column space-x-6"> 
@@ -85,8 +76,10 @@
                 <p class="cv-button-text text-white">(2018-2020)</p>
               </div>
             </div>
-          </button></li>
-          <li><button class="cv-modal-open bg-blue-600 p-4 hover:opacity-50 rounded-full mt-2" tabindex="7">
+          </button>
+        </li>
+        <li>
+          <button class="cv-modal-open bg-blue-600 p-4 hover:opacity-50 rounded-full mt-2" tabindex="8">
             <div class="flex flex-row space-x-2"> 
               <img class="object-contain h-20 rounded-full" src="https://media-exp1.licdn.com/dms/image/C510BAQH4Fc203kgKag/company-logo_100_100/0/1519856098280?e=1642636800&v=beta&t=QpfKd24MxagLrD0d1V_GQoBQkcXMHpNqYWoigx_-xa0">
               <div class="flex-column space-x-6"> 
@@ -95,25 +88,25 @@
                 <p class="cv-button-text text-white">(2015)</p>
               </div>
             </div>
-          </button></li>
-        </ul>
-      </div>
+          </button>
+        </li>
+      </ul>
     </div>
   </section>
 
   <footer class="bg-black h-40 w-full border-t-8 border-blue-400 opacity-90">
     <div class="flex flex-row space-x-6 justify-center items-center mt-12">
       <div class="flex flex-row gap-2">
-        <a tabindex="8" href="https://www.linkedin.com/in/federicobecona" target="_blank">
+        <a tabindex="9" href="https://www.linkedin.com/in/federicobecona" target="_blank">
           <img class = "object-contain w-12 hover:opacity-50" alt="Ícono de Linkedin" src="https://iconsplace.com/wp-content/uploads/_icons/ffffff/256/png/linkedin-icon-18-256.png" />
         </a>
-        <a tabindex="9" href="https://github.com/federicobecona" target="_blank">
+        <a tabindex="10" href="https://github.com/federicobecona" target="_blank">
           <img class = "object-contain w-12 hover:opacity-50" alt="Ícono de Github" src="https://icon-library.com/images/github-icon-white/github-icon-white-6.jpg"/>
         </a>
       </div>
       <p class="text-white">|</p>
       <div class="flex justify-center items-center">
-        <button class="mail-modal-open text-white text-2xl font-thin hover:opacity-50" tabindex="10">Contactar</button>
+        <button class="mail-modal-open text-white text-2xl font-thin hover:opacity-50" tabindex="11">Contactar</button>
       </div>
     </div>
   </footer>
