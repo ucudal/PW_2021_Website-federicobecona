@@ -48,9 +48,14 @@ mailSendModal.addEventListener("submit",(e)=>{
     });
 })
 
+window.addEventListener("scroll", function(){
+    var header = document.querySelector("header")   
+    header.classList.toggle("sticky-navbar", window.scrollY > 0)
+})
+
 for (let i = 0; i < listModalTexts.length; i++) {
     cvOpenModalBtns[i].addEventListener('click', function() {
-    cvModalContent.innerHTML = "";
+    cvModalContent.innerHTML = ""
     let p = document.createElement('p')
     p.textContent = listModalTexts[i]
     cvModalContent.appendChild(p)
@@ -80,7 +85,7 @@ for (let i = 0; i < listModalTexts.length; i++) {
                     node.href = linksMatrix[i][2]
                 }
                 td.appendChild(node)
-                tr.appendChild(td);
+                tr.appendChild(td)
             }
         }
     }
@@ -115,3 +120,4 @@ function toggleModal(modal){
         modal.classList.add("invisible")
     }
 }
+

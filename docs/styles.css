@@ -1,14 +1,57 @@
+html{
+    scroll-behavior: smooth;
+}
+
 a:hover { 
     opacity: 0.5;
     text-decoration: underline;
+    cursor: pointer;
 }
 
-
-
-@media (min-width:500px){
-    #central-background{
+@media (min-width:400px){
+    header{
+        padding: 4pt;
+    }
+    #central-backgroxund{
         background: linear-gradient(180deg, rgb(2, 0, 36) 0%, rgb(0, 110, 255) 100%)
     }
-
+    #cv-title{
+        padding-bottom: 6px;
+    }
+    li.cv-subtitles{
+        padding-top: 4pt;
+        padding-bottom: 4pt;
+    }    
 }
 
+@media (max-width:400px){
+    #contenedor-foto-perfil{
+        width: 150px;
+    }
+    a.nav-text{
+        font-size: 14px;
+    }
+    p.nav-text{
+        font-size: 14px;
+    }
+    button.nav-text{
+        font-size: 14px;
+    }
+    p.cv-button-title{
+        font-size: 14px;
+    }
+    p.cv-button-text{
+        font-size: 12px;
+    }
+    #cv-title{
+        font-size: 34px;
+    }
+    li.cv-subtitles{
+        font-size: 24px;
+    }
+}
+
+header.sticky-navbar{
+    background-color: rgb(2, 0, 36);
+    opacity: 0.8;
+}
