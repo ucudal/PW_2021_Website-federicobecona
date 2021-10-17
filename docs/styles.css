@@ -3,9 +3,11 @@ a:hover {
     text-decoration: underline;
 }
 
+
+
 @media (min-width:500px){
     #central-background{
-        background: linear-gradient(180deg, rgb(4, 0, 71) 0%, rgb(3, 3, 148) 35%, rgb(0, 110, 255) 100%)
+        background: linear-gradient(180deg, rgb(2, 0, 36) 0%, rgb(0, 110, 255) 100%)
     }
 
 }

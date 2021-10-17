@@ -15,7 +15,7 @@ let modalMessage = document.getElementById('message')
 
 var listModalTexts = ["Desde el año 2018 estudio la carrera de ingeniería en informática.", 
                     "A principios de 2021 obtuve el título intermedio de analista en informática.", 
-                    "Realicé exámenes de cambridge ESOL obteniendo el First en el año 2015.  "]
+                    "Realicé exámenes ESOL de la Universidad de Cambridge obteniendo el First en el año 2015.  "]
 var linksMatrix = [
                 ["Proyecto", "Lenguajes y Herramientas", ""],
                 ["Inteligencia Artificial I", "Python, SciKitLearn, RapidMiner, Excel", "https://federicobecona.github.io/Machine-Learning-Portfolio/home"],
@@ -50,40 +50,41 @@ mailSendModal.addEventListener("submit",(e)=>{
 
 for (let i = 0; i < listModalTexts.length; i++) {
     cvOpenModalBtns[i].addEventListener('click', function() {
-        cvModalContent.innerHTML = "";
-        let p = document.createElement('p')
-        p.textContent = listModalTexts[i]
-        cvModalContent.appendChild(p)
-        if(i==0){
-            var myTableDiv = cvModalContent
-            var table = document.createElement('TABLE');
-            myTableDiv.appendChild(table);
-            table.border='1';
-            var tableBody = document.createElement('TBODY');
-            table.appendChild(tableBody);
-            for (let i=0; i<linksMatrix.length; i++){
-               var tr = document.createElement('TR');
-               tableBody.appendChild(tr);
-               for (let j=0; j<2; j++){
-                   var td = document.createElement('TD');
-                   var node
-                   node = document.createTextNode(linksMatrix[i][j])
-                   td.width='200';
-                   if(i==0){
+    cvModalContent.innerHTML = "";
+    let p = document.createElement('p')
+    p.textContent = listModalTexts[i]
+    cvModalContent.appendChild(p)
+    if(i==0){
+        var myTableDiv = cvModalContent
+        var table = document.createElement('TABLE')
+        table.style.marginTop = "20px"
+        myTableDiv.appendChild(table)
+        table.border='1'
+        var tableBody = document.createElement('TBODY')
+        table.appendChild(tableBody)
+        for (let i=0; i<linksMatrix.length; i++){
+            var tr = document.createElement('TR')
+            tableBody.appendChild(tr)
+            for (let j=0; j<2; j++){
+                var td = document.createElement('TD')
+                var node
+                node = document.createTextNode(linksMatrix[i][j])
+                td.width='200'
+                if(i==0){
                         td.style.fontWeight = 'bold'
-                   }
-                   if(j==0 && i!=0){
+                }
+                if(j==0 && i!=0){
                         node = document.createElement('a')
                         node.textContent = linksMatrix[i][j]
                         node.style.color = 'blue'
                         node.href = linksMatrix[i][2]
-                   }
-                   td.appendChild(node)
-                   tr.appendChild(td);
-               }
+                }
+                td.appendChild(node)
+                tr.appendChild(td);
             }
         }
-        toggleModal(cvModalContainer)
+    }
+    toggleModal(cvModalContainer)
     })
 }
 
