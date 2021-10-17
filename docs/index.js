@@ -13,8 +13,8 @@ const cvModalText = document.getElementById('cv-modal-text')
 let modalFrom_name = document.getElementById('from_name')
 let modalMessage = document.getElementById('message')
 
-var listModalTexts = ["Desde el año 2018 estudio la carrera de ingeniería en informática.", 
-                    "A principios de 2021 obtuve el título intermedio de analista en informática.", 
+var listModalTexts = ["Desde el año 2018 estudio la carrera de Ingeniería en Informática.", 
+                    "A principios de 2021 obtuve el título intermedio de Analista en Informática.", 
                     "Realicé exámenes ESOL de la Universidad de Cambridge obteniendo el First en el año 2015.  "]
 var linksMatrix = [
                 ["Proyecto", "Lenguajes y Herramientas", ""],
@@ -71,13 +71,13 @@ for (let i = 0; i < listModalTexts.length; i++) {
                 node = document.createTextNode(linksMatrix[i][j])
                 td.width='200'
                 if(i==0){
-                        td.style.fontWeight = 'bold'
+                    td.style.fontWeight = 'bold'
                 }
                 if(j==0 && i!=0){
-                        node = document.createElement('a')
-                        node.textContent = linksMatrix[i][j]
-                        node.style.color = 'blue'
-                        node.href = linksMatrix[i][2]
+                    node = document.createElement('a')
+                    node.textContent = linksMatrix[i][j]
+                    node.style.color = 'blue'
+                    node.href = linksMatrix[i][2]
                 }
                 td.appendChild(node)
                 tr.appendChild(td);
