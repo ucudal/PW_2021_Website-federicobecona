@@ -1,17 +1,17 @@
 const mailOpenModalBtns = document.getElementsByClassName('mailModal__openButton')
 const mailCloseModalBtn = document.getElementById('mailModal__closeButton')
 const mailModalContainer = document.getElementById('mailModal__container')
-const mailSendModal = document.getElementById('mailModal__sendButton')
+const mailSendModal = document.getElementById('mailModal__form')
 const mailNotifierModal = document.getElementById('mailModal__notifier')
+let modalFrom_name = document.getElementById('mailModal__from_name')
+let modalMessage = document.getElementById('mailModal__message')
 
 const cvOpenModalBtns = document.getElementsByClassName('cvModal__openButton')
 const cvCloseModalBtn = document.getElementById('cvModal__closeButton')
-const cvModalContent = document.getElementById('cvModal__content')
+const cvModalContent = document.getElementById('cvModal__mainContent')
 const cvModalContainer = document.getElementById('cvModal__container')
 const cvModalText = document.getElementById('cvModal__text')
 
-let modalFrom_name = document.getElementById('from_name')
-let modalMessage = document.getElementById('message')
 
 var listModalTexts = ["⚡Dato de color: soy de Peñarol",
                     "Desde el año 2018 estudio la carrera de Ingeniería en Informática.", 

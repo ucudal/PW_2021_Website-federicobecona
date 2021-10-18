@@ -8,7 +8,7 @@ a:hover {
     cursor: pointer;
 }
 
-#profile-picture{
+img.home__profilePicture{
     cursor: pointer;
 }
 
@@ -16,10 +16,10 @@ a:hover {
     header{
         padding: 4pt;
     }
-    #central-backgroxund{
+    div.home__container{
         background: linear-gradient(180deg, rgb(2, 0, 36) 0%, rgb(0, 110, 255) 100%)
     }
-    #cv__title{
+    li.cv__title{
         padding-bottom: 6px;
     }
     li.cv__subtitle{
@@ -29,7 +29,7 @@ a:hover {
 }
 
 @media (max-width:400px){
-    #profile-picture{
+    img.home__profilePicture{
         width: 150px;
     }
     a.nav__item{
@@ -41,7 +41,7 @@ a:hover {
     button.nav__item{
         font-size: 20px;
     }
-    #cv__title{
+    li.cv__title{
         font-size: 34px;
     }
     li.cv__subtitle{
@@ -53,11 +53,14 @@ a:hover {
     p.cv__buttonText{
         font-size: 12px;
     }
-    img.contactMeans__image{
+    img.footer__image{
         width: 20px;
     }
-    button.contactMeans__button{
+    button.footer__button{
         font-size: 20px;
+    }
+    img.cv__buttonImage{
+        padding:4pt;
     }
 }
 
