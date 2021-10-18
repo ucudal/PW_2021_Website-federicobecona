@@ -8,6 +8,10 @@ a:hover {
     cursor: pointer;
 }
 
+#foto-perfil{
+    cursor: pointer;
+}
+
 @media (min-width:400px){
     header{
         padding: 4pt;
@@ -48,6 +52,12 @@ a:hover {
     }
     li.cv-subtitles{
         font-size: 24px;
+    }
+    img.footer-image{
+        width: 20px;
+    }
+    button.footer-button{
+        font-size: 20px;
     }
 }
 
