@@ -25,11 +25,11 @@ a:hover {
     li.cv__subtitle{
         padding-top: 4pt;
         padding-bottom: 4pt;
-    }    
+    }
 }
 
 @media (max-width:400px){
-    #foto-perfil{
+    #profile-picture{
         width: 150px;
     }
     a.nav__item{
