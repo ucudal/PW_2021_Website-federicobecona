@@ -14,7 +14,7 @@ img.home__profilePicture{
 
 @media (min-width:400px){
     header{
-        padding: 4pt;
+        margin-top: 60pt;
     }
     div.home__container{
         background: linear-gradient(180deg, rgb(2, 0, 36) 0%, rgb(0, 110, 255) 100%)
@@ -67,4 +67,5 @@ img.home__profilePicture{
 header.sticky-navbar{
     background-color: rgb(2, 0, 36);
     opacity: 0.8;
+    margin-top: 0px;
 }
