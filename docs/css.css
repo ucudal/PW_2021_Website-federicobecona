@@ -12,10 +12,14 @@ img.home__profilePicture{
     cursor: pointer;
 }
 
-@media (min-width:400px){
+@media (min-width:1280px){
     header{
         margin-top: 60pt;
     }
+}
+
+
+@media (min-width:400px){
     div.home__container{
         background: linear-gradient(180deg, rgb(2, 0, 36) 0%, rgb(0, 110, 255) 100%)
     }
@@ -27,6 +31,7 @@ img.home__profilePicture{
         padding-bottom: 4pt;
     }
 }
+
 
 @media (max-width:400px){
     img.home__profilePicture{
