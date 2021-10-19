@@ -1,0 +1,71 @@
+html{
+    scroll-behavior: smooth;
+}
+
+a:hover { 
+    opacity: 0.5;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+img.home__profilePicture{
+    cursor: pointer;
+}
+
+@media (min-width:400px){
+    header{
+        margin-top: 60pt;
+    }
+    div.home__container{
+        background: linear-gradient(180deg, rgb(2, 0, 36) 0%, rgb(0, 110, 255) 100%)
+    }
+    li.cv__title{
+        padding-bottom: 6px;
+    }
+    li.cv__subtitle{
+        padding-top: 4pt;
+        padding-bottom: 4pt;
+    }
+}
+
+@media (max-width:400px){
+    img.home__profilePicture{
+        width: 150px;
+    }
+    a.nav__item{
+        font-size: 20px;
+    }
+    p.nav__item{
+        font-size: 20px;
+    }
+    button.nav__item{
+        font-size: 20px;
+    }
+    li.cv__title{
+        font-size: 34px;
+    }
+    li.cv__subtitle{
+        font-size: 24px;
+    }
+    p.cv__buttonTitle{
+        font-size: 14px;
+    }
+    p.cv__buttonText{
+        font-size: 12px;
+    }
+    img.footer__image{
+        width: 20px;
+    }
+    button.footer__button{
+        font-size: 20px;
+    }
+    img.cv__buttonImage{
+        padding:4pt;
+    }
+}
+
+header.sticky-navbar{
+    background-color: rgb(2, 0, 36);
+    opacity: 0.8;
+    margin-top: 0px;
+}
