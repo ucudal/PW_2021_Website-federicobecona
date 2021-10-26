@@ -42,7 +42,7 @@ mailSendModal.addEventListener("submit",(e)=>{
         message: modalMessage.value
     }
     mailNotifierModal.textContent = "Enviando..."
-    emailjs.send('mail', 'template_dfpsj68', templateParams)
+    emailjs.send('mail', 'template_65faony', templateParams)
     .then(function(response) {
         mailNotifierModal.textContent = "Mensaje enviado"
     }, function(error) {
