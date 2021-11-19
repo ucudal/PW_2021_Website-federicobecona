@@ -14,15 +14,12 @@ img.home__profilePicture{
 
 @media (min-width:1280px){
     header{
-        margin-top: 60pt;
+        margin-top: 20pt;
     }
 }
 
 
 @media (min-width:400px){
-    div.home__container{
-        background: linear-gradient(180deg, rgb(2, 0, 36) 0%, rgb(0, 110, 255) 100%)
-    }
     li.cv__title{
         padding-bottom: 6px;
     }
@@ -52,19 +49,19 @@ img.home__profilePicture{
     li.cv__subtitle{
         font-size: 24px;
     }
-    p.cv__buttonTitle{
+    p.cv_expTitle{
         font-size: 14px;
     }
-    p.cv__buttonText{
+    p.cv_expText{
         font-size: 12px;
     }
-    img.footer__image{
+    img.nav__image{
         width: 20px;
     }
-    button.footer__button{
+    button.nav__button{
         font-size: 20px;
     }
-    img.cv__buttonImage{
+    img.cv_expImage{
         padding:4pt;
     }
 }
@@ -75,10 +72,29 @@ header.sticky-navbar{
     margin-top: 0px;
 }
 
-.cv__button{
-    cursor: default;
-}
-
 p{
     color: white;
+}
+
+a:hover{
+    text-decoration: none;
+}
+    
+.background{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(180deg, rgb(2, 0, 36) 0%, rgb(32, 136, 255) 100%)
+}
+
+#Inicio{
+    position: absolute;
+    top: 0;
+    width:100%
+}
+
+#CV{
+    position: absolute;
+    top: 0;
+    width:100%;
+    visibility: hidden
 }

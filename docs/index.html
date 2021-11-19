@@ -9,116 +9,82 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="https://play-lh.googleusercontent.com/Eptimf2ke2AaZUN3J4lybWXKkOLgz-aRzmGRa6XZMNrmzhCoI7a17AhJQu-IGu-9RFs"/>
 </head>
-<body>
 
-  <header class="nav top-0 left-0 fixed w-full flex p-4">
-    <div class="nav__container flex space-x-4 justify-around w-full">
-      <div class="nav__leftContent flex space-x-4">
-        <a class="nav__item text-white text-2xl" tabindex="1" href="#Inicio">Inicio</a>
-        <p class="nav__item text-white">|</p>
-        <a class="nav__item text-white text-2xl" tabindex="2" href="#CV">Curriculum</a>
+<body class="background">
+  
+  <header class="nav top-0 left-0 fixed w-full flex">
+    <div class="nav__container flex justify-around w-full">
+      <div class="nav__leftContent flex space-x-4 mt-4 mb-4">
+        <a id="homeBtn" class="nav__item text-white text-2xl" tabindex="1" href="#Inicio">Inicio</a>
+        <p class="nav__item text-white mt-1">|</p>
+        <a id="cvBtn" class="nav__item text-white text-2xl" tabindex="2" href="#CV">Curriculum</a>
       </div>
-      <button class="nav__item mailModal__openButton text-white text-2xl font-thin hover:opacity-50" tabindex="3">Contactar</button>  
-      </div>
+      <div class="nav__container flex flex-row space-x-4 justify-center items-center">
+        <div class="nav__rightContent flex justify-center items-center">
+          <button id="msgModal__openButton" class="nav__button text-white text-2xl font-thin hover:opacity-50" tabindex="3">Contactar</button>
+        </div>
+        <p class="nav__divider text-white">|</p>
+        <div class="nav__leftContent flex flex-row">
+          <a class="nav__link" tabindex="4" href="https://www.linkedin.com/in/federicobecona" target="_blank">
+            <img class = "nav__image object-contain w-8 hover:opacity-50" alt="Ícono de Linkedin" src="https://iconsplace.com/wp-content/uploads/_icons/ffffff/256/png/linkedin-icon-18-256.png" />
+          </a>
+          <a class="nav__link" tabindex="5" href="https://github.com/federicobecona" target="_blank">
+            <img class = "nav__image object-contain w-8 hover:opacity-50" alt="Ícono de Github" src="https://icon-library.com/images/github-icon-white/github-icon-white-6.jpg"/>
+          </a>  
+        </div>
     </div>
   </header>
 
-  <section id="Inicio" class="home">
-    <div class="home__container bg-gradient-to-b from-blue-900 to-blue-500 border-b-8 border-blue-400"> 
-      <div class="home__content h-screen flex flex-col justify-center items-center">¡
-        <img class = "home__profilePicture cvModal__openButton rounded-full border-4 shadow-2xl w-64 hover:opacity-50" tabindex="4" alt="Foto de perfil de Federico Becoña" src="https://pbs.twimg.com/profile_images/1437157776623644674/8s4j-pYJ_400x400.jpg" />
-        <h1 class="home__text text-white text-center text-6xl font-bold mb-4">Federico Becoña</h1>
-        <h2 class="home__text font-sans text-white text-center text-2xl font-thin">estudiante de ingeniería en informática</h2>
-        <h2 class="home__text font-sans text-white text-center text-2xl font-thin">Montevideo, Uruguay</h2>
-        <h2 class="home__text font-sans text-white text-center text-2xl font-thin">21 años</h2>
-        <div class="home__readMoreContainer flex flex-col justify-center items-center mt-4">
-          <p class="home__readMoreText text-white">Leer más</p>
-          <a class="home__readMoreLink" tabindex="5" href="#CV">
-            <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="35px" height="35px" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet" class="jsx-156389127"><g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="white" stroke="none" class="jsx-156389127"><path d="M207 4822 l-207 -207 1278 -1278 1277 -1277 1275 1275 1275 1275 -210 210 -210 210 -1065 -1065 -1065 -1065 -1065 1065 c-586 586 -1067 1065 -1070 1065 -3 0 -98 -93 -213 -208z" class="jsx-156389127"></path><path d="M207 2652 l-207 -207 1223 -1223 1222 -1222 110 0 110 0 1218 1218 c669 669 1217 1222 1217 1227 0 6 -92 102 -205 215 l-205 205 -1068 -1068 -1067 -1067 -1065 1065 c-586 586 -1067 1065 -1070 1065 -3 0 -98 -93 -213 -208z" class="jsx-156389127"></path></g><g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="white" stroke="none" class="jsx-156389127"><path d="M207 4822 l-207 -207 1278 -1278 1277 -1277 1275 1275 1275 1275 -210 210 -210 210 -1065 -1065 -1065 -1065 -1065 1065 c-586 586 -1067 1065 -1070 1065 -3 0 -98 -93 -213 -208z" class="jsx-156389127"></path><path d="M207 2652 l-207 -207 1223 -1223 1222 -1222 110 0 110 0 1218 1218 c669 669 1217 1222 1217 1227 0 6 -92 102 -205 215 l-205 205 -1068 -1068 -1067 -1067 -1065 1065 c-586 586 -1067 1065 -1070 1065 -3 0 -98 -93 -213 -208z" class="jsx-156389127"></path></g></svg>                
-          </a>
-        </div>
-      </div>
-    </div>
+  <section id="Inicio" class="home__list mt-40 flex flex-col justify-center items-center">
+      <button id="detModal__openButton">
+        <img class = "home__profilePicture rounded-full border-4 shadow-2xl w-64 hover:opacity-50" alt="Foto de perfil de Federico Becoña" src="https://pbs.twimg.com/profile_images/1437157776623644674/8s4j-pYJ_400x400.jpg" tabindex="6"/>
+      </button>
+      <h1 class="home__text text-white text-center text-6xl font-bold mt-2 mb-4">Federico Becoña</h1>
+      <h2 class="home__text font-sans text-white text-center text-2xl font-thin">Estudiante de ingeniería en informática</h2>
+      <h2 class="home__text font-sans text-white text-center text-2xl font-thin">Montevideo, Uruguay</h2>
+      <h2 class="home__text font-sans text-white text-center text-2xl font-thin">21 años</h2>
   </section>
-  
-  <section id="CV" class="cv">
-    <div class="cv__container bg-blue-200">
-      <ul class="cv__list h-auto pt-8 pb-8 flex flex-col justify-center items-center">
-        <li class="cv__title text-blue-900 text-center text-6xl">Currículum</li>
-        <li>
-          <button class="cv__button cvModal__openButton bg-blue-600 p-4 hover:opacity-50 rounded-full mt-4" tabindex="6">
-            <div class="cv__buttonItem flex flex-row"> 
-              <div id ="exp1" class="cv__buttonTextContent flex-column w-64"> 
-              </div>
-            </div>
-          </button>
-        </li>
-        <li>
-          <button class="cv__button cvModal__openButton bg-blue-600 p-4 hover:opacity-50 rounded-full mt-2" tabindex="7">
-            <div class="cv__buttonItem flex flex-row"> 
-              <div id ="exp2" class="cv__buttonTextContent flex-column w-64"> 
-              </div>
-            </div>
-          </button>
-        </li>
-        <li>
-          <button class="cv__button cvModal__openButton bg-blue-600 p-4 hover:opacity-50 rounded-full mt-2" tabindex="8">
-            <div class="cv__buttonItem flex flex-row"> 
-              <div id ="exp3" class="cv__buttonTextContent flex-column w-64"> 
-              </div>
-            </div>
-          </button>
-        </li>
-      </ul>
-    </div>
-  </section>
+    
+  <section id="CV" class="cv__list mt-40 flex flex-col justify-center items-center">
+    <li id="cv__title"><p class="text-center text-6xl mb-8">Currículum</p></li>
+    <li id="cv__exp1" class="p-4 border-2 border-white rounded-full mt-4 hover:opacity-50 flex-column w-80 flex flex-col items-center" tabindex="7"></li>
+    <li id="cv__exp2" class="p-4 border-2 border-white rounded-full mt-4 hover:opacity-50  flex-column w-80 flex flex-col items-center" tabindex="8"></li>
+    <li id="cv__exp3" class="p-4 border-2 border-white rounded-full mt-4 hover:opacity-50 flex-column w-80 flex flex-col items-center" tabindex="9"></li>
+  </section> 
 
-  <footer class="footer bg-black h-40 w-full border-t-8 border-blue-400 opacity-90">
-    <div class="footer__container flex flex-row space-x-4 justify-center items-center mt-12">
-      <div class="footer__leftContent flex flex-row gap-1">
-        <a class="footer__link" tabindex="9" href="https://www.linkedin.com/in/federicobecona" target="_blank">
-          <img class = "footer__image object-contain w-12 hover:opacity-50" alt="Ícono de Linkedin" src="https://iconsplace.com/wp-content/uploads/_icons/ffffff/256/png/linkedin-icon-18-256.png" />
-        </a>
-        <a class="footer__link" tabindex="10" href="https://github.com/federicobecona" target="_blank">
-          <img class = "footer__image object-contain w-12 hover:opacity-50" alt="Ícono de Github" src="https://icon-library.com/images/github-icon-white/github-icon-white-6.jpg"/>
-        </a>  
+
+
+  <!--Modal Contacto-->
+  <div id="msgModal__container" class="invisible fixed w-full h-full top-0 left-0  flex justify-center items-center">
+    <div class="msgModel__content bg-white w-96 p-5 rounded border-2 border-blue-400">
+      <div class="msgModal__header flex justify-end">
+        <button id="msgModal__closeButton" class="text-blue-600 hover:opacity-50">Cerrar</button>
       </div>
-      <p class="footer__divider text-white">|</p>
-      <div class="footer__rightContent flex justify-center items-center">
-        <button class="footer__button mailModal__openButton text-white text-2xl font-thin hover:opacity-50" tabindex="11">Contactar</button>
-      </div>
-    </div>
-  </footer>
-
- <!--Modal Contacto-->
- <div id="mailModal__container" class="invisible fixed w-full h-full top-0 left-0  flex justify-center items-center">
-  <div class="mailModel__content bg-white w-96 p-5 rounded border-2 border-blue-400">
-    <div class="mailModal__header flex justify-end">
-      <button id="mailModal__closeButton" class="text-blue-600 hover:opacity-50">Cerrar</button>
-    </div>
-    <h1 class="mailModal__title text-2xl p-4">Contactar</h1>
-    <form id="mailModal__form" class="space-y-4 p-2">
-      <input id="mailModal__from_name" type="text" class="focus:ring-1 focus:ring-blue-600 focus:outline-none w-full text-sm text-black placeholder-gray-500 border rounded-md py-2 pl-10" placeholder="Nombre"/>
-      <input id="mailModal__message" type="text" class="focus:ring-1 pb-28 focus:ring-blue-600 focus:outline-none w-full text-sm text-black placeholder-gray-500 border rounded-md py-2 pl-10" placeholder="Mensaje" />
-      <h6 id="mailModal__notifier" class="justify-start"></h6>        
-      <div class="mailModal__footer flex justify-end p-2">
-          <button class="mailModal__sendButton bg-blue-600 text-white p-2 rounded-full hover:opacity-50" type="submit">Enviar</button>
-        </div>
-    </form>
-  </div>
-</div>
-
- <!--Modal Detalles-->
- <div id="cvModal__container" class="invisible fixed w-full h-full top-0 left-0 flex justify-center items-center">
-  <div class="cvModal__content bg-white w-96 p-5 rounded border-2 border-blue-400">
-    <div class="cvModal__header flex justify-end">
-      <button id="cvModal__closeButton" class="text-blue-600 hover:opacity-50">Cerrar</button>
-    </div>
-    <div id="cvModal__mainContent" class="w-80 p-5">
-      <p id="cvModal__text" class="text-justify"></p>
+      <h1 class="msgModal__title text-2xl p-4">Contactar</h1>
+      <form id="msgModal__form" class="space-y-4 p-2">
+        <input id="msgModal__from_name" type="text" class="focus:ring-1 focus:ring-blue-600 focus:outline-none w-full text-sm text-black placeholder-gray-500 border rounded-md py-2 pl-10" placeholder="Nombre"/>
+        <input id="msgModal__message" type="text" class="focus:ring-1 pb-28 focus:ring-blue-600 focus:outline-none w-full text-sm text-black placeholder-gray-500 border rounded-md py-2 pl-10" placeholder="Mensaje" />
+        <h6 id="msgModal__notifier" class="justify-start"></h6>        
+        <div class="msgModal__nav flex justify-end p-2">
+            <button class="msgModal__sendButton bg-blue-600 text-white p-2 rounded-full hover:opacity-50" type="submit">Enviar</button>
+          </div>
+      </form>
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <!--Modal Detalles-->
+  <div id="detModal__container" class="invisible fixed w-full h-full top-0 left-0 flex justify-center items-center">
+    <div class="detModal__content bg-white w-96 p-5 rounded border-2 border-blue-400">
+      <div class="detModal__header flex justify-end">
+        <button id="detModal__closeButton" class="text-blue-600 hover:opacity-50">Cerrar</button>
+      </div>
+      <div id="detModal__mainContent" class="w-80 p-5">
+        <p id="detModal__text" class="text-justify"></p>
+      </div>
+    </div>
+
+    <script src="script.min.js"></script>
+
 </body>
+
 </html>
