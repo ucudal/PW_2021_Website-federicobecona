@@ -21,10 +21,10 @@ img.home__profilePicture{
 
 @media (min-width:1280px){
     #Inicio{
-        margin-top: 250px;
+        margin-top: 200px;
     }
     #CV{
-        margin-top: 250px;
+        margin-top: 200px;
     }
     .nav__divider{
         margin-top: 1pt;
