@@ -19,7 +19,7 @@ img.home__profilePicture{
 }
 
 
-@media (min-width:1280px){
+@media (min-width:1024px){
     #Inicio{
         margin-top: 200px;
     }
@@ -32,9 +32,12 @@ img.home__profilePicture{
 }
 
 
-@media (max-width:500px){
-    section{
-        margin-top: 0pt;
+@media (max-width:1024px){
+    #Inicio{
+        margin-top: 150px;
+    }
+    #CV{
+        margin-top: 75px;
     }
     .menuText{
         font-size: 20px;

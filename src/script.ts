@@ -25,7 +25,7 @@ fetch(urlExp, {
     },
 }).then(function(response) {
     response.text().then(function(ans){
-        let exp = JSON.parse(ans)
+        let exp = JSON.parse(ans)['experiencia-laboral']
         let divs = [document.getElementById('cv__exp1'), 
             document.getElementById('cv__exp2'),
          document.getElementById('cv__exp3')
@@ -54,13 +54,11 @@ fetch(urlExp, {
     })
 })
 
-
-
 msgSendModal!.addEventListener("submit",(e)=>{
     e.preventDefault()
     let msg = {
-        nombreContacto: modalFrom_name!.textContent,
-        mensaje: modalMessage!.textContent
+        nombreContacto: modalFrom_name?.textContent,
+        mensaje: modalMessage?.textContent
     }
     msgNotifierModal!.textContent = "Enviando..."
     fetch(urlCookie, {
@@ -75,7 +73,6 @@ msgSendModal!.addEventListener("submit",(e)=>{
         })
     })
 })
-
 
 
 function toggleModal(modal: HTMLElement | null){

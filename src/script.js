@@ -16,7 +16,7 @@ const cv = document.getElementById('CV')
 const cvBtn = document.getElementById('cvBtn')
 
 let urlExp = "https://pw2021-apinode-federicobecona.federicobecona.repl.co/experiencia-laboral"
-let urlCookie = "https://pw2021-apinode-federicobecona.federicobecona.repl.co/hacer-cookie"
+let urlCookie = "https://pw2021-apinode-federicobecona.federicobecona.repl.co/enviar-formulario"
 
 fetch(urlExp, {
     method: "GET",
@@ -25,7 +25,7 @@ fetch(urlExp, {
     },
 }).then(function(response) {
     response.text().then(function(ans){
-        let exp = JSON.parse(ans)
+        let exp = JSON.parse(ans)['experiencia-laboral']
         let divs = [document.getElementById('cv__exp1'), 
             document.getElementById('cv__exp2'),
          document.getElementById('cv__exp3')
