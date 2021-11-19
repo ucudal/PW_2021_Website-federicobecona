@@ -19,18 +19,26 @@ img.home__profilePicture{
 }
 
 
-@media (min-width:400px){
-    li.cv__title{
-        padding-bottom: 6px;
+@media (min-width:1280px){
+    #Inicio{
+        margin-top: 250px;
     }
-    li.cv__subtitle{
-        padding-top: 4pt;
-        padding-bottom: 4pt;
+    #CV{
+        margin-top: 250px;
+    }
+    .nav__divider{
+        margin-top: 1pt;
     }
 }
 
 
-@media (max-width:400px){
+@media (max-width:500px){
+    section{
+        margin-top: 0pt;
+    }
+    .menuText{
+        font-size: 20px;
+    } 
     img.home__profilePicture{
         width: 150px;
     }
@@ -66,12 +74,6 @@ img.home__profilePicture{
     }
 }
 
-header.sticky-navbar{
-    background-color: rgb(2, 0, 36);
-    opacity: 0.8;
-    margin-top: 0px;
-}
-
 p{
     color: white;
 }
@@ -97,4 +99,8 @@ a:hover{
     top: 0;
     width:100%;
     visibility: hidden
+}
+
+section{
+    margin-top: 50pt;
 }
