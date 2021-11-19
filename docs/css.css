@@ -74,3 +74,11 @@ header.sticky-navbar{
     opacity: 0.8;
     margin-top: 0px;
 }
+
+.cv__button{
+    cursor: default;
+}
+
+p{
+    color: white;
+}
