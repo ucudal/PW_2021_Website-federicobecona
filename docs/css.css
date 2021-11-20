@@ -12,32 +12,25 @@ img.home__profilePicture{
     cursor: pointer;
 }
 
-@media (min-width:1280px){
-    header{
-        margin-top: 20pt;
-    }
+body {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgb(2, 0, 36)), to(rgb(32, 136, 255))) fixed
 }
 
-
-@media (min-width:1024px){
-    #Inicio{
-        margin-top: 200px;
+@media (min-width:1280px){
+    section{
+        transform: translate(0%, 35%);
     }
-    #CV{
-        margin-top: 200px;
+    header{
+        margin-top: 20pt;
     }
     .nav__divider{
         margin-top: 1pt;
     }
 }
 
-
 @media (max-width:1024px){
-    #Inicio{
-        margin-top: 150px;
-    }
-    #CV{
-        margin-top: 75px;
+    section{
+        transform: translate(0%, 15%);
     }
     .menuText{
         font-size: 20px;
@@ -84,26 +77,13 @@ p{
 a:hover{
     text-decoration: none;
 }
-    
-.background{
-    width: 100vw;
-    height: 100vh;
-    background: linear-gradient(180deg, rgb(2, 0, 36) 0%, rgb(32, 136, 255) 100%)
-}
 
-#Inicio{
-    position: absolute;
+section {
+    width:100%;
     top: 0;
-    width:100%
+    position: absolute;
 }
 
 #CV{
-    position: absolute;
-    top: 0;
-    width:100%;
     visibility: hidden
-}
-
-section{
-    margin-top: 50pt;
 }
