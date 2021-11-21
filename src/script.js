@@ -47,6 +47,7 @@ fetch(urlExp, {
                 descripcion.style.color = "rgb(0, 50, 100)"
                 descripcion.textContent = exp[i].descripcion
                 let fechas = document.createElement("p")
+                fechas.style.fontWeight = '500'
                 fechas.style.fontSize = 'large'
                 fechas.style.color = "rgb(0, 50, 100)"
                 fechas.textContent = exp[i].fechaInicio.toString().split('T')[0] + 
