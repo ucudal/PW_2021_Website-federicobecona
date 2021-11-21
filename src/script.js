@@ -35,16 +35,22 @@ fetch(urlExp, {
                 let empresa = document.createElement("p")
                 empresa.style.fontWeight = 'bold'
                 empresa.style.fontSize = 'x-large'
+                empresa.style.color = "rgb(0, 50, 100)"
+                empresa.textContent = exp[i].empresa
                 let puesto = document.createElement("p")
                 puesto.style.fontWeight = 'bolder'
-                empresa.style.fontSize = 'large'
-                let descripcion = document.createElement("p")
-                let fechas = document.createElement("p")
-                empresa.textContent = exp[i].empresa
+                puesto.style.fontSize = 'large'
+                puesto.style.color = "rgb(0, 50, 100)"
                 puesto.textContent = exp[i].puesto
+                let descripcion = document.createElement("p")
+                descripcion.style.fontSize = 'large'
+                descripcion.style.color = "rgb(0, 50, 100)"
                 descripcion.textContent = exp[i].descripcion
+                let fechas = document.createElement("p")
+                fechas.style.fontSize = 'large'
+                fechas.style.color = "rgb(0, 50, 100)"
                 fechas.textContent = exp[i].fechaInicio.toString().split('T')[0] + 
-                    " || " + exp[i].fechaFin.toString().split('T')[0]
+                    ", " + exp[i].fechaFin.toString().split('T')[0]
                 divs[i].appendChild(empresa)
                 divs[i].appendChild(puesto)
                 divs[i].appendChild(descripcion)

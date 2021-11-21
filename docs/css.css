@@ -20,6 +20,9 @@ body {
     section{
         transform: translate(0%, 35%);
     }
+    #CV{
+        transform: translate(0%, 20%);
+    }
     header{
         margin-top: 20pt;
     }
@@ -30,7 +33,10 @@ body {
 
 @media (max-width:1024px){
     section{
-        transform: translate(0%, 15%);
+        transform: translate(0%, 20%);
+    }
+    #CV{
+        transform: translate(0%, 10%);
     }
     .menuText{
         font-size: 20px;
@@ -49,6 +55,7 @@ body {
     }
     li.cv__title{
         font-size: 34px;
+        margin-bottom: 0;
     }
     li.cv__subtitle{
         font-size: 24px;
@@ -85,5 +92,10 @@ section {
 }
 
 #CV{
-    visibility: hidden
+    visibility: hidden;
+}
+
+.cvExp{
+    background:white;
+    opacity: 0.85;
 }
