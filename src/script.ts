@@ -33,40 +33,27 @@ fetch(urlExp, {
         for(let i=0; i<ans.length; i++){
             if(exp[i]){
                 let button = document.createElement("button")
-                button.className = "cvExp flex flex-col items-center border-2 border-white rounded-md pr-6 pl-6 mt-2 mb-2 hover:opacity-50 flex-column"
+                button.className = "cv__Exp flex flex-col items-center w-80 border-2 border-white rounded-md pr-6 pl-6 mt-2 mb-2 hover:opacity-50 flex-column"
                 button.addEventListener('click', function() {
                     detModalContent!.innerHTML = ''
-                    let descripcion = document.createElement("p")
-                    descripcion.style.fontSize = 'large'
-                    descripcion.style.color = "rgb(0, 50, 100)"
+                    let descripcion = document.createElement("h6")
+                    descripcion.classList.add('cv__description')
                     descripcion.textContent = exp[i].descripcion
                     detModalContent!.appendChild(descripcion)
                     toggleModalHandlerDet()
                 })
                 let empresa = document.createElement("p")
-                empresa.style.fontWeight = 'bold'
-                empresa.style.fontSize = 'xx-large'
-                empresa.style.color = "rgb(0, 50, 100)"
+                empresa.classList.add('cv__Title')
                 empresa.textContent = exp[i].empresa
                 let puesto = document.createElement("p")
-                puesto.style.fontWeight = '500'
-                puesto.style.fontSize = 'large'
-                puesto.style.color = "rgb(0, 50, 100)"
+                puesto.classList.add('cv__Subtitle')
                 puesto.textContent = exp[i].puesto
-                let fechaI = document.createElement("p")
-                fechaI.style.fontWeight = '500'
-                fechaI.style.fontSize = 'large'
-                fechaI.style.color = "rgb(0, 50, 100)"
-                fechaI.textContent = "Inicio: "+ exp[i].fechaInicio.toString().split('T')[0]
-                let fechaF = document.createElement("p")
-                fechaF.style.fontWeight = '500'
-                fechaF.style.fontSize = 'large'
-                fechaF.style.color = "rgb(0, 50, 100)"
-                fechaF.textContent = "Fin: " + exp[i].fechaFin.toString().split('T')[0]
+                let fecha = document.createElement("p")
+                fecha.classList.add('cv__Date')
+                fecha.textContent = exp[i].fechaInicio.toString().split('T')[0]+", " + exp[i].fechaFin.toString().split('T')[0]
                 button.appendChild(empresa)
                 button.appendChild(puesto)
-                button.appendChild(fechaI)
-                button.appendChild(fechaF)
+                button.appendChild(fecha)
                 cv!.appendChild(button)
             }
         }

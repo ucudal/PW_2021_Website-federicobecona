@@ -16,12 +16,22 @@ body {
     background: -webkit-gradient(linear, left top, left bottom, from(rgb(2, 0, 36)), to(rgb(32, 136, 255))) fixed
 }
 
+
+@media (min-width:800px){
+    #home__descContainer{
+        width: 35vw;
+    }
+}
+
 @media (min-width:1280px){
+    #home__descContainer{
+        width: 35vw;
+    }
     section{
         transform: translate(0%, 35%);
     }
     #CV{
-        transform: translate(0%, 20%);
+        transform: translate(0%, 15%);
     }
     header{
         margin-top: 20pt;
@@ -29,14 +39,24 @@ body {
     .nav__divider{
         margin-top: 1pt;
     }
+    .cv__BigTitle{
+        padding-top: 2pt;
+        padding-bottom: 2pt;
+        font-size: xx-large;
+    }
+    .cv__Title, .cv__Subtitle, .cv__Date, .cv_Description{
+        font-size: large;
+    }
 }
-
 @media (max-width:1024px){
+    #home__descContainer{
+        width: 90vw;
+    }
     section{
         transform: translate(0%, 20%);
     }
     #CV{
-        transform: translate(0%, 7%);
+        transform: translate(0%, 12%);
     }
     .menuText{
         font-size: 20px;
@@ -75,6 +95,12 @@ body {
     img.cv_expImage{
         padding:4pt;
     }
+    .cv__BigTitle{
+        font-size: large;
+    }
+    .cv__Title, .cv__Subtitle, .cv__Date, .cv_Description{
+        font-size: medium;
+    }
 }
 
 p{
@@ -95,7 +121,29 @@ section {
     visibility: hidden;
 }
 
-.cvExp{
+.cv__Exp{
     background:white;
     opacity: 0.85;
+    width: 20rem;
+}
+
+#home__descContainer{
+    text-align: justify;
+}
+
+.cv__Title{
+    color: rgb(0, 50, 100);
+    font-weight: bold;
+}
+
+.cv__Subtitle, .cv__Date{
+    color: rgb(0, 50, 100);
+}
+
+.cv__Education{
+    cursor: default;
+}
+
+.cv__description{
+    color: black;
 }
