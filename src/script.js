@@ -1,3 +1,4 @@
+//Modal contacto
 const msgOpenModalBtn = document.getElementById('msgModal__openButton')
 const msgCloseModalBtn = document.getElementById('msgModal__closeButton')
 const msgModalContainer = document.getElementById('msgModal__container')
@@ -5,6 +6,8 @@ const msgSendModal = document.getElementById('msgModal__form')
 const msgNotifierModal = document.getElementById('msgModal__notifier')
 let modalFrom_name = document.getElementById('msgModal__from_name')
 let modalMessage = document.getElementById('msgModal__message')
+
+//Modal detalles
 const detOpenModalBtn = document.getElementById('detModal__openButton')
 const detCloseModalBtn = document.getElementById('detModal__closeButton')
 const detModalContent = document.getElementById('detModal__mainContent')
@@ -18,6 +21,7 @@ const cvBtn = document.getElementById('cvBtn')
 let urlExp = "https://pw2021-apinode-federicobecona.federicobecona.repl.co/experiencia-laboral"
 let urlCookie = "https://pw2021-apinode-federicobecona.federicobecona.repl.co/enviar-formulario"
 
+//Get experiencia laboral
 fetch(urlExp, {
     method: "GET",
     headers: {
@@ -26,43 +30,51 @@ fetch(urlExp, {
 }).then(function(response) {
     response.text().then(function(ans){
         let exp = JSON.parse(ans)['experiencia-laboral']
-        let divs = [document.getElementById('cv__exp1'), 
-            document.getElementById('cv__exp2'),
-         document.getElementById('cv__exp3')
-        ]
         for(let i=0; i<ans.length; i++){
             if(exp[i]){
+                let button = document.createElement("button")
+                button.className = "cvExp flex flex-col items-center border-2 border-white rounded-md pr-6 pl-6 mt-2 mb-2 hover:opacity-50 flex-column"
+                button.addEventListener('click', function() {
+                    detModalContent.innerHTML = ''
+                    let descripcion = document.createElement("p")
+                    descripcion.style.fontSize = 'large'
+                    descripcion.style.color = "rgb(0, 50, 100)"
+                    descripcion.textContent = exp[i].descripcion
+                    detModalContent.appendChild(descripcion)
+                    toggleModalHandlerDet()
+                })
                 let empresa = document.createElement("p")
                 empresa.style.fontWeight = 'bold'
-                empresa.style.fontSize = 'x-large'
+                empresa.style.fontSize = 'xx-large'
                 empresa.style.color = "rgb(0, 50, 100)"
                 empresa.textContent = exp[i].empresa
                 let puesto = document.createElement("p")
-                puesto.style.fontWeight = 'bolder'
+                puesto.style.fontWeight = '500'
                 puesto.style.fontSize = 'large'
                 puesto.style.color = "rgb(0, 50, 100)"
                 puesto.textContent = exp[i].puesto
-                let descripcion = document.createElement("p")
-                descripcion.style.fontSize = 'large'
-                descripcion.style.color = "rgb(0, 50, 100)"
-                descripcion.textContent = exp[i].descripcion
-                let fechas = document.createElement("p")
-                fechas.style.fontWeight = '500'
-                fechas.style.fontSize = 'large'
-                fechas.style.color = "rgb(0, 50, 100)"
-                fechas.textContent = exp[i].fechaInicio.toString().split('T')[0] + 
-                    ", " + exp[i].fechaFin.toString().split('T')[0]
-                divs[i].appendChild(empresa)
-                divs[i].appendChild(puesto)
-                divs[i].appendChild(descripcion)
-                divs[i].appendChild(fechas)
+                let fechaI = document.createElement("p")
+                fechaI.style.fontWeight = '500'
+                fechaI.style.fontSize = 'large'
+                fechaI.style.color = "rgb(0, 50, 100)"
+                fechaI.textContent = "Inicio: "+ exp[i].fechaInicio.toString().split('T')[0]
+                let fechaF = document.createElement("p")
+                fechaF.style.fontWeight = '500'
+                fechaF.style.fontSize = 'large'
+                fechaF.style.color = "rgb(0, 50, 100)"
+                fechaF.textContent = "Fin: " + exp[i].fechaFin.toString().split('T')[0]
+                button.appendChild(empresa)
+                button.appendChild(puesto)
+                button.appendChild(fechaI)
+                button.appendChild(fechaF)
+                cv.appendChild(button)
             }
         }
     })
 })
 
 
-
+//Post mensaje
 msgSendModal.addEventListener("submit",(e)=>{
     e.preventDefault()
     let msg = {
@@ -84,7 +96,7 @@ msgSendModal.addEventListener("submit",(e)=>{
 })
 
 
-
+//Modales
 function toggleModal(modal){
     if(modal.classList.contains("invisible")){
         modal.classList.remove("invisible")
@@ -111,24 +123,25 @@ window.onclick = function(event) {
 }
 msgOpenModalBtn.onclick = toggleModalHandlerMsg
 msgCloseModalBtn.onclick = toggleModalHandlerMsg
-detOpenModalBtn.onclick = toggleModalHandlerDet
+detOpenModalBtn.onclick = toggleModalHandlerDetPersonal
 detCloseModalBtn.onclick = toggleModalHandlerDet
 
+function toggleModalHandlerDetPersonal(){
+    detModalContent.innerHTML = ''
+    var h = document.createElement('h6')
+    h.textContent = "⚡Dato de color: soy de Peñarol"
+    h.style.textAlign = "center"
+    detModalContent.appendChild(h)
+    h.classList.add("font-bold")
+    let img = document.createElement('img')
+    img.classList.add("rounded-full")
+    img.setAttribute('alt', 'Estadio de Peñarol');
+    img.setAttribute('src', "https://a1.espncdn.com/combiner/i?img=%2Fphoto%2F2020%2F0426%2Fr692907_1296x729_16%2D9.jpg&w=920&h=518&scale=crop&cquality=80&location=origin&format=jpg");
+    detModalContent.appendChild(img)
+    toggleModalHandlerDet()
+}
 
-
-var h = document.createElement('h6')
-h.textContent = "⚡Dato de color: soy de Peñarol"
-detModalContent.appendChild(h)
-h.classList.add("font-bold")
-let img = document.createElement('img')
-img.classList.add("rounded-full")
-img.setAttribute('alt', 'Estadio de Peñarol');
-img.setAttribute('src', "https://a1.espncdn.com/combiner/i?img=%2Fphoto%2F2020%2F0426%2Fr692907_1296x729_16%2D9.jpg&w=920&h=518&scale=crop&cquality=80&location=origin&format=jpg");
-detModalContent.appendChild(img)
-
-
-
-
+//Cambio de pestaña en nav
 homeBtn.onclick = (e)=> {
     e.preventDefault()
     home.style.visibility = "visible"
@@ -140,8 +153,3 @@ cvBtn.onclick = (e)=> {
     cv.style.visibility = "visible"
     home.style.visibility = "hidden"
 }
-
-window.addEventListener("scroll", function(){
-    var header = document.querySelector("header")   
-    header.classList.toggle("sticky-navbar", window.scrollY > 0)
-})

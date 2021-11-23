@@ -13,6 +13,7 @@
 
 <body>
   
+  <!--Header-->
   <header class="nav top-0 left-0 w-full flex">
     <div class="nav__container flex justify-around w-full">
       <div class="nav__leftContent flex space-x-4 mt-4 mb-4">
@@ -36,6 +37,7 @@
     </div>
   </header>
 
+  <!--Seccióon de Inicio-->
   <section id="Inicio" class="home__list flex flex-col justify-center items-center">
       <button id="detModal__openButton">
         <img class = "home__profilePicture rounded-full border-4 shadow-2xl w-64 hover:opacity-50" alt="Foto de perfil de Federico Becoña" src="https://pbs.twimg.com/profile_images/1437157776623644674/8s4j-pYJ_400x400.jpg" tabindex="6"/>
@@ -46,13 +48,10 @@
       <h2 class="home__text font-sans text-white text-center text-2xl font-thin">21 años</h2>
   </section>
     
+  <!--Seccióon de CV-->
   <section id="CV" class="cv__list flex flex-col justify-center items-center">
     <li id="cv__title"><p class="text-center text-6xl mb-4">Currículum</p></li>
-    <li id="cv__exp1" class="cvExp border-2 border-white rounded-md pr-6 pl-6 mt-2 hover:opacity-50 flex-column w-80 flex flex-col items-center" tabindex="7"></li>
-    <li id="cv__exp2" class="cvExp border-2 border-white rounded-md pr-6 pl-6 mt-2 hover:opacity-50  flex-column w-80 flex flex-col items-center" tabindex="8"></li>
-    <li id="cv__exp3" class="cvExp border-2 border-white rounded-md pr-6 pl-6 mt-2 mb-4 hover:opacity-50 flex-column w-80 flex flex-col items-center" tabindex="9"></li>
-  </section> 
-
+     </section> 
 
 
   <!--Modal Contacto-->
@@ -63,8 +62,8 @@
       </div>
       <h1 class="msgModal__title text-2xl p-4">Contactar</h1>
       <form id="msgModal__form" class="space-y-4 p-2">
-        <input id="msgModal__from_name" type="text" class="focus:ring-1 focus:ring-blue-600 focus:outline-none w-full text-sm text-black placeholder-gray-500 border rounded-md py-2 pl-10" placeholder="Nombre"/>
-        <input id="msgModal__message" type="text" class="focus:ring-1 focus:ring-blue-600 focus:outline-none w-full text-sm text-black placeholder-gray-500 border rounded-md py-2 pl-10 pb-28" placeholder="Mensaje" />
+        <input id="msgModal__from_name" type="text" autocomplete="off" class="focus:ring-1 focus:ring-blue-600 focus:outline-none w-full text-sm text-black placeholder-gray-500 border rounded-md py-2 pl-10" placeholder="Nombre"/>
+        <input id="msgModal__message" type="text" autocomplete="off" class="focus:ring-1 focus:ring-blue-600 focus:outline-none w-full text-sm text-black placeholder-gray-500 border rounded-md py-2 pl-10 pb-28" placeholder="Mensaje" />
         <h6 id="msgModal__notifier" class="justify-start"></h6>        
         <div class="msgModal__nav flex justify-end p-2">
             <button class="msgModal__sendButton bg-blue-600 text-white p-2 rounded-full hover:opacity-50" type="submit">Enviar</button>
@@ -72,6 +71,7 @@
       </form>
     </div>
   </div>
+
   <!--Modal Detalles-->
   <div id="detModal__container" class="invisible fixed w-full h-full top-0 left-0 flex justify-center items-center">
     <div class="detModal__content bg-white w-96 p-5 rounded border-2 border-blue-400">
