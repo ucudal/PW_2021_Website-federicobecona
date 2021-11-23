@@ -83,7 +83,6 @@ msgSendModal.addEventListener("submit",(e)=>{
     })
 })
 
-
 //Modales
 function toggleModal(modal){
     if(modal.classList.contains("invisible")){
